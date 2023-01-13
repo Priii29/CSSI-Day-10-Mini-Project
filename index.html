@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr. Worldwide's Food Stand</title>
+    <script src="https://use.fontawesome.com/5cd833ef09.js"></script>
+		<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+
+  <body>
+		
+		<!--NAVBAR -->
+		<div class= "navbar" >
+			<div class="navbar-menu is-active">
+				<div class="navbar-start">
+					<div class="navbar-item has-dropdown" id="navbardrop">
+						<a class="navbar-link">
+							Foods
+						</a>
+						<div class="navbar-dropdown">
+							<a href="" class="navbar-item"> Snacks </a>
+							<a href="" class="navbar-item"> Drinks </a>
+							<a href="" class="navbar-item"> Meals </a>
+					</div>
+					</div>
+
+				</div>
+				<div class="navbar-end">
+					<a href="" class="navbar-item"> Help </a>
+					<button onclick="makeUL()" class="navbar-item js-modal-trigger" data-target="modal-cart"> 
+						<img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt = "shopping cart"/>
+					</button>
+				</div>
+			</div>
+		</div>
+    <br>
+      <br>
+
+
+    
+    <!-- Modal for Shopping Cart -->
+    
+  <div id="modal-cart" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-large">
+      <!-- content -->
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">Your Cart</p>
+            </div>
+          </div>
+          <div class="content">
+            <p>
+              <ul id="cartList"></ul>
+            </p>
+             <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <center><div class="column is-3">
+      <h1 class="title">Mr. Worldwide's Food Stand</h1>
+      <img src="https://p.kindpng.com/picc/s/328-3289362_pitbull-mr-worldwide-hd-png-download.png"/>
+              <p class="subtitle">
+          Browse and Buy the best foods from across the world!
+        </p>
+        <input
+          id="searchbar"
+          class="input is-primary is-large"
+          type="text"
+          name="language"
+          placeholder="Type to search..."
+        /><br><br>
+    </div></center>
+
+   <!-- ROW 1 -->
+    <div class="columns is-centered is-variable is-5">
+      <!-- COLUMN 1 -->
+     <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card" id="plantain">
+          <div class="card-image">
+            <figure class="image">
+              <img src="https://simshomekitchen.com/wp-content/uploads/2021/09/sweet-fried-plantains-500x375-1.jpg" alt="Fried Plantain" style = "width: 400px; height: 400px; object-fit: cover;"/> 
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Plantain</p></center>
+              <p class="subtitle is-6"><span class="tag is-warning is-light">Snacks</span>&nbsp&nbsp<span class="tag">Nigerian</span></p>
+              <center><button onclick="addItem('Plantain')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="https://www.kitchensanctuary.com/wp-content/uploads/2020/12/Quick-Chicken-Ramen-square-FS-22.jpg" alt="Ramen" style = "width: 400px; height: 400px; object-fit: cover;"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Ramen</p></center>
+              <p class="subtitle is-6"><span class="tag is-success is-light">Meals</span>&nbsp&nbsp<span class="tag">Korean</span></p>
+              <center><button onclick="addItem('Ramen')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img
+                src="https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg"
+                alt="Placeholder image"
+								style = "width: 400px; height: 400px; object-fit: cover;"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Sushi</p></center>
+              <p class="subtitle is-6"><span class="tag is-light is-success">Meals</span>&nbsp&nbsp<span class="tag">Japanese</span></p>
+              <center><button onclick="addItem('Sushi')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+            <!-- ROW 2 -->
+    <div class="columns is-centered is-variable is-5">
+      <!-- COLUMN 1 -->
+     <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="https://simplot-media.azureedge.net/-/media/foundation/recipes/loaded-poutine-fries_046.jpg" alt="Poutine" style = "width: 400px; height: 400px; object-fit: cover;"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Poutine</p></center>
+              <p class="subtitle is-6"><span class="tag is-light is-success">Meals</span>&nbsp&nbsp<span class="tag">Canadian</span></p>
+              <center><button onclick="addItem('Poutine')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img
+                src="https://www.chefkunalkapur.com/wp-content/uploads/2021/07/Dhokla-Recipe-1300x731.jpg?v=1625419391"
+                alt="Dhokla"
+								style = "width: 400px; height: 400px; object-fit: cover;"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Dhokla</p></center>
+              <p class="subtitle is-6"><span class="tag is-light is-success">Meals</span>&nbsp&nbsp<span class="tag">Gujarati</span></p>
+              <center><button onclick="addItem('Dhokla')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img
+                src="https://thewoksoflife.com/wp-content/uploads/2014/09/shanghai-soup-dumpling-12-e1569441411964.jpg"
+                alt="Xiao long bao"
+								style = "width: 400px; height: 400px; object-fit: cover;"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Xiao Long Bao</p></center>
+              <p class="subtitle is-6"><span class="tag is-light is-success">Meals</span>&nbsp&nbsp<span class="tag">Shanghainese</span></p>
+              <center><button onclick="addItem('Xiao Long Bao')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    
+
+            <!-- ROW 3 -->
+    <div class="columns is-centered is-variable is-5">
+      <!-- COLUMN 1 -->
+     <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="https://herbsandflour.com/wp-content/uploads/2020/05/lemonade-838x1024.jpg" alt="Lemonade" style = "width: 400px; height: 400px; object-fit: cover;"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Lemonade</p></center>
+              <p class="subtitle is-6"><span class="tag is-info is-light">Drinks</span>&nbsp&nbsp
+              <center><button onclick="addItem('Lemonade')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img
+								src="https://www.dailyfreshdonuts.com/uploads/1/2/6/6/126600703/s329250056980460353_p105_i1_w750.jpeg"
+                alt="Bubble Tea"
+								style = "width: 400px; height: 400px; object-fit: cover;"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Bubble Tea</p></center>
+              <p class="subtitle is-6"><span class="tag is-info is-light">Drinks</span>&nbsp&nbsp<span class="tag">Taiwan</span></p>
+              <center><button onclick="addItem('Bubble Tea')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="column is-one-quarter">
+        <!-- CARD -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img
+                src="https://img3.exportersindia.com/product_images/bc-full/dir_184/5513207/soft-drinks-1518120735-3635468.jpeg"
+                alt="Soft Drinks"
+								style = "width: 400px; height: 400px; object-fit: cover;"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <center><p class="title is-4">Soft Drinks</p></center>
+              <p class="subtitle is-6"><span class="tag is-info is-light">Drinks</span>&nbsp&nbsp
+     
+            <center><button onclick="addItem('Soft Drinks')">Add to cart</button></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+
+
+
+
+    
+  </body>
+  <script src="script.js"></script>
+
+</html>
