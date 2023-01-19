@@ -33,8 +33,7 @@ Image of front page
 
 
 
-
-<img src="https://imgur.com/gallery/uoKBPhe">
+![Image of front page](https://imgur.com/gallery/uoKBPhe)
 
 
 ## Room for improvement
