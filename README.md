@@ -34,6 +34,7 @@ Image of front page
 
 
 <img src="https://imgur.com/uffUlkz.png">
+<img src="https://imgur.com/qpXbGY9.png">
 
 
 ## Room for improvement
