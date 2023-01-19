@@ -33,7 +33,7 @@ Image of front page
 
 
 
-![Image of front page](https://imgur.com/uffUlkz)
+<img src="https://i.imgur.com/C4r2ClL.png" alt="checkbox" width="600">
 
 
 ## Room for improvement
